@@ -10,7 +10,6 @@ export function BrowseContainer({ slides }) {
   const [loading, setLoading] = useState(true);
   const { firebase } = useContext(FirebaseContext);
   const user = firebase.auth().currentUser || {};
-  console.log(user);
 
   useEffect(() => {
     setTimeout(() => {
