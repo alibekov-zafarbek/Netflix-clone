@@ -149,8 +149,6 @@ export const Dropdown = styled.div`
   }
 `;
 
-
-
 export const Profile = styled.div`
   display: flex;
   align-items: center;

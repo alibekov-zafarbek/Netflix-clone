@@ -9,4 +9,5 @@ export const GlobalStyles = createGlobalStyle`
         color: #333333;
         font-style: 16px;
     }   
+  
 `;

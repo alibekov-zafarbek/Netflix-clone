@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Profiles /> renders the <Profiles /> with populated data 1`] = `
+<div
+  class="Profiles__Container-sc-9l5kq9-0 dLAyjL"
+>
+  <h1
+    class="Profiles__Title-sc-9l5kq9-1 fwrrB"
+  >
+    Who's watching?
+  </h1>
+  <ul
+    class="Profiles__List-sc-9l5kq9-2 bPPmro"
+  >
+    <li
+      class="Profiles__Item-sc-9l5kq9-5 cFIKCI"
+    >
+      <img
+        class="Profiles__Picture-sc-9l5kq9-4 inWejn"
+        data-testid="profile-picture"
+        src="/images/users/images/karl.png"
+      />
+      <p
+        class="Profiles__Name-sc-9l5kq9-3 cxazwA"
+      >
+        Karl Hadwen
+      </p>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<Profiles /> renders the <Profiles /> with populated data but misc profile image 1`] = `
+<div
+  class="Profiles__Container-sc-9l5kq9-0 dLAyjL"
+>
+  <h1
+    class="Profiles__Title-sc-9l5kq9-1 fwrrB"
+  >
+    Who's watching?
+  </h1>
+  <ul
+    class="Profiles__List-sc-9l5kq9-2 bPPmro"
+  >
+    <li
+      class="Profiles__Item-sc-9l5kq9-5 cFIKCI"
+    >
+      <img
+        class="Profiles__Picture-sc-9l5kq9-4 inWejn"
+        data-testid="profile-picture-misc"
+        src="/images/users/images/karl.png"
+      />
+      <p
+        class="Profiles__Name-sc-9l5kq9-3 cxazwA"
+      >
+        Karl Hadwen
+      </p>
+    </li>
+  </ul>
+</div>
+`;
