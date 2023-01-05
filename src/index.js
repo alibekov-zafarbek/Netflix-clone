@@ -6,6 +6,7 @@ import { GlobalStyles } from "./global-styles";
 import { firebase } from "./lib/firebase.prod";
 import { FirebaseContext } from "./content/firebase";
 import './i18n'
+//hello
 
 render(
   <>
