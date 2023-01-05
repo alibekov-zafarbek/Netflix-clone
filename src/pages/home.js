@@ -4,24 +4,28 @@ import { FooterContainer } from "../containers/footer";
 import { FaqsContainer } from "../containers/faqs";
 import {Feature,  OptForm } from '../components';
 import { HeaderContainer } from '../containers/header';
+import { useTranslation } from 'react-i18next';
 
 export default function Home() {
+  const {t} = useTranslation()
   return (
     <>
     <HeaderContainer>
       <Feature>
         <Feature.Title>
-          Unlimited films, TV Programmes and more.
+          
+          {t("Unlimited")}
+          {/* Unlimited films, TV Programmes and more. */}
         </Feature.Title>
         <Feature.SubTitle>
-        Watch anywhere. Cancel at any time.
+        {t("Watch-anywhere")}
         </Feature.SubTitle>
 
+        <OptForm.Text>{t("Ready-to-watch")}</OptForm.Text>
         <OptForm>
-        <OptForm.Input placeholder="Email address" />
-        <OptForm.Button>Try it now</OptForm.Button>
+        <OptForm.Input placeholder={t("Email")} />
+        <OptForm.Button>{t("Get-Started")}</OptForm.Button>
         <OptForm.Break />
-        <OptForm.Text>Ready to watch? Enter your email to create or restart your membership.</OptForm.Text>
       </OptForm>
       </Feature>
     

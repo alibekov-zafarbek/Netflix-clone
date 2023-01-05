@@ -5,10 +5,25 @@ import { Home, Browse, Signin, Signup } from "./pages";
 import { IsUserRedirect, ProtectedRoute } from "./helpers/routes";
 import { useAthListener } from "./hooks";
 
+
 export default function App() {
   const { user } = useAthListener();
+  if(localStorage.getItem("location")){
 
+    function getlocation() {
+      fetch('https://api.ipregistry.co/?key=zq3s4axqkxp9h6bb')
+      .then(function (response) {
+          return response.json();
+      })
+      .then(function (payload) {
+         localStorage.setItem("location",payload.location.country.name);
+        });
+      }
+      getlocation()
+    }
+    document.title = `Netflix ${localStorage.getItem('location')} - Watch TV Shows Online, Watch Movies Online `
   return (
+    <>
     <Router>
       <Switch>
         <IsUserRedirect
@@ -42,5 +57,10 @@ export default function App() {
         </IsUserRedirect>
       </Switch>
     </Router>
+    <div>
+      
+     
+    </div>
+    </>
   );
 }

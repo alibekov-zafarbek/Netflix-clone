@@ -15,6 +15,9 @@ export const Inner = styled.div`
   flex-direction: column;
   max-width: 815px;
   margin: auto;
+  @media (max-width:567px) {
+    padding: 70px 5px;
+  }
 `;
 
 export const Title = styled.h1`

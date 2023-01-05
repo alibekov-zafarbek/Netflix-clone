@@ -54,3 +54,33 @@ export const Break = styled.p`
  flex-basis: 100% ;
  height: 0;
 `;
+export const Wrapper = styled.div`
+position: relative;
+&::before {
+    content: "";
+    background: url(https://cdn1.iconfinder.com/data/icons/social-object-set-5/74/34-512.png) no-repeat ;
+    background-size: 12px 14px;
+
+    width: 12px !important;
+    height: 14px !important;
+    color: #fff;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    font-family: nf-icon;
+    font-size: 15px;
+    pointer-events: none;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(233deg)
+    brightness(105%) contrast(102%);
+  }
+  `
+
+export const Language = styled.select`
+  padding: 0.5rem 1.375rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 0.875rem;
+  border: 1px solid #aaa;
+  text-transform: none;
+`;

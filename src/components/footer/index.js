@@ -7,6 +7,8 @@ import {
      Title,
      Text,
      Break,
+     Wrapper,
+     Language
 
 } from './styles/footer';
 
@@ -37,4 +39,10 @@ Footer.Text = function FooterText({ children, ...restProps}) {
 
 Footer.Break = function FooterBreak({ children, ...restProps}) {
     return <Break {...restProps}>{children}</Break>;
+};
+Footer.Wrapper = function FooterWrapper({ children, ...restProps}) {
+    return <Wrapper {...restProps}>{children}</Wrapper>;
+};
+Footer.Language = function FooterLanguage({ children, ...restProps}) {
+    return <Language {...restProps}>{children}</Language>;
 };

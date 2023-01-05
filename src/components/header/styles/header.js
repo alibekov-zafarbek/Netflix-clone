@@ -1,13 +1,22 @@
-import styled from 'styled-components/macro';
-import { Link as ReachRouterLink } from 'react-router-dom';
+import styled from "styled-components/macro";
+import { Link as ReachRouterLink } from "react-router-dom";
 
 export const Background = styled.div`
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35)), url(${({ src }) => (src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg')}) top left / cover
-    no-repeat;
+  background: rgba(0, 0, 0, 0.4);
+  /* background-image: ; */
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8) 0,
+      transparent 60%,
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(${({ src }) => src ? `../images/misc/${src}.jpg` : "../images/misc/home-bg.jpg"})
+      top left / cover no-repeat;
   @media (max-width: 1100px) {
-    ${({ dontShowOnSmallViewPort }) => dontShowOnSmallViewPort && `background: none;`}
+    ${({ dontShowOnSmallViewPort }) =>
+      dontShowOnSmallViewPort && `background: none;`}
   }
 `;
 
@@ -22,6 +31,7 @@ export const Container = styled.div`
   }
   @media (max-width: 1000px) {
     margin: 0 30px;
+    height: 70px;
   }
 `;
 
@@ -29,7 +39,7 @@ export const Link = styled.p`
   color: #fff;
   text-decoration: none;
   margin-right: 30px;
-  font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
+  font-weight: ${({ active }) => (active === "true" ? "700" : "normal")};
   cursor: pointer;
   &:hover {
     font-weight: bold;
@@ -52,10 +62,10 @@ export const SearchInput = styled.input`
   height: 30px;
   font-size: 14px;
   border-radius: 4px;
-  margin-left: ${({ active }) => (active === true ? '10px' : '0')};
-  padding: ${({ active }) => (active === true ? '0 10px' : '0')};
-  opacity: ${({ active }) => (active === true ? '1' : '0')};
-  width: ${({ active }) => (active === true ? '200px' : '0px')};
+  margin-left: ${({ active }) => (active === true ? "10px" : "0")};
+  padding: ${({ active }) => (active === true ? "0 10px" : "0")};
+  opacity: ${({ active }) => (active === true ? "1" : "0")};
+  width: ${({ active }) => (active === true ? "200px" : "0px")};
   &:focus {
     background-color: rgba(0, 0, 0, 0.8);
   }
@@ -93,7 +103,7 @@ export const SearchIcon = styled.button`
 export const ButtonLink = styled(ReachRouterLink)`
   display: block;
   background-color: #e50914;
-  width: 84px;
+  width: auto;
   height: fit-content;
   color: white;
   border: 0;
@@ -104,6 +114,10 @@ export const ButtonLink = styled(ReachRouterLink)`
   text-decoration: none;
   &:hover {
     background: #f40612;
+  }
+  @media (max-width: 500px) {
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
   }
 `;
 
@@ -197,6 +211,10 @@ export const Logo = styled.img`
     height: 45px;
     width: 167px;
   }
+  @media (max-width: 500px) {
+    height: 24px;
+    width: 100%;
+  }
 `;
 
 export const PlayButton = styled.button`
@@ -215,5 +233,51 @@ export const PlayButton = styled.button`
   &:hover {
     background-color: #ff1e1e;
     color: white;
+  }
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  position: relative;
+  &::after {
+  }
+  div{
+    margin: 0 0.75rem;
+    width: auto;
+  }
+  div::before {
+    content: "";
+    background: url(https://cdn1.iconfinder.com/data/icons/social-object-set-5/74/34-512.png)
+      no-repeat;
+    background-size: 12px 14px;
+
+    width: 12px !important;
+    height: 14px !important;
+    color: #fff;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    font-family: nf-icon;
+    font-size: 15px;
+    pointer-events: none;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(233deg)
+      brightness(105%) contrast(102%);
+  }
+`;
+
+export const Language = styled.select`
+  width: auto;
+  padding: 0.5rem 1.375rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 0.875rem;
+  border: 1px solid #aaa;
+  text-transform: none;
+  @media (max-width: 500px) {
+    font-size: .8rem;
+    padding: 0.25rem 0.5rem;
   }
 `;
