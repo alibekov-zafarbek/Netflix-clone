@@ -25,7 +25,7 @@ export function HeaderContainer({ children }) {
                 <option
                   key={lng.key}
                   value={lng.key}
-                  selected={i18next.resolvedLanguage === lng.key}
+                  defaultValue={i18next.resolvedLanguage === lng.key}
                 >
                   {lng.name}
                 </option>
