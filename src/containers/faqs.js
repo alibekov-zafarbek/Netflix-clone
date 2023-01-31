@@ -7,7 +7,7 @@ export function FaqsContainer() {
   const {t} = useTranslation()
   return (
     <Accordion>
-      <Accordion.Title>Frequently Asked Questions</Accordion.Title>
+      <Accordion.Title>{t('Frequently-Asked-Questions')}</Accordion.Title>
       <Accordion.Frame>
         {faqsData.map((item) => (
           <Accordion.Item key={item.id}>

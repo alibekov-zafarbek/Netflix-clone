@@ -19,11 +19,13 @@ export function JumbotronContainer() {
           </Jumbotron.Pane>
           <Jumbotron.Pane>
             <Jumbotron.Image src={item.image} alt={item.alt}></Jumbotron.Image>
-            <Jumbotron.Wrapper>
-              <Jumbotron.Video  autoPlay  playsInline loop>
-                <source src={item?.video} type="video/mp4" />
-              </Jumbotron.Video>
-            </Jumbotron.Wrapper>
+            {item.video && (
+              <Jumbotron.Wrapper>
+                <Jumbotron.Video autoPlay playsInline loop>
+                  <source src={item?.video} type="video/mp4" />
+                </Jumbotron.Video>
+              </Jumbotron.Wrapper>
+            )}
           </Jumbotron.Pane>
         </Jumbotron>
       ))}

@@ -28,12 +28,11 @@ export const Inner = styled.div`
 
 export const Pane = styled.div`
 position: relative;
-  width: 100%;
-  display: flex;
-  text-align: center;
-  align-items: center;
+  width: 50%;
   @media (max-width: 1000px) {
-    flex-direction: column;
+    width: 100%;
+    padding: 0 45px;
+    text-align: center;
   }
 `;
 

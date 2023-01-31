@@ -8,9 +8,15 @@ i18next
   .use(LanguageDetector)
   .use(backend)
   // .init(i18nextOptions)
-  .init({
-    // debug: true,
-    fallbacklng: 'en',
-    saveMissing: true,
-    
+   .init({
+    supportedLngs: ['en','ru'],
+    fallbackLng: "en",
+    detection: {
+      order: ['path', 'cookie', 'htmlTag', 'localStorage', 'subdomain'],
+      caches: ['cookie']
+    },
+    backend: {
+      loadPath: '/locales/{{lng}}/translation.json',
+    },
+    react: {useSuspense: false}
   });

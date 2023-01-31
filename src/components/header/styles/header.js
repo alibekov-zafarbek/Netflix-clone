@@ -253,10 +253,10 @@ export const Wrapper = styled.div`
       no-repeat;
     background-size: 12px 14px;
 
-    width: 12px !important;
+    width: 14px !important;
     height: 14px !important;
     color: #fff;
-    left: 0.5rem;
+    left: 1.2rem;
     top: 50%;
     transform: translateY(-50%);
     position: absolute;

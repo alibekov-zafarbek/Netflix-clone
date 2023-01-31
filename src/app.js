@@ -10,7 +10,7 @@ export default function App() {
   const { user } = useAthListener();
   if(localStorage.getItem("location")){
 
-    function getlocation() {
+    (function() {
       fetch('https://api.ipregistry.co/?key=zq3s4axqkxp9h6bb')
       .then(function (response) {
           return response.json();
@@ -18,8 +18,8 @@ export default function App() {
       .then(function (payload) {
          localStorage.setItem("location",payload.location.country.name);
         });
-      }
-      getlocation()
+      })()
+      
     }
     document.title = `Netflix ${localStorage.getItem('location')} - Watch TV Shows Online, Watch Movies Online `
   return (
